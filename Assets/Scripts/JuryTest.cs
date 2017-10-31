@@ -4,21 +4,46 @@ using UnityEngine;
 
 public class JuryTest : MonoBehaviour {
 
-	public void Judgement() {
-		Renderer rend = GetComponent<Renderer> ();
+	//All of this is attached to Camera
+	public Crew_FirstMate _FirstMate;
+	public Crew_Pilot _Pilot;
+	public Crew_Cook _Cook;
+	public Crew_Doctor _Doctor;
+	public Crew_Engineer _Engineer;
 
-		float roll = Random.Range (0.0f, 10.0f);
+	public int crewCulprit;
+	public int crewAlive;
 
-		print ("They rolled a " + roll);
+	void Awake() {
+		//Rolls for starting victim
+		crewAlive = Random.Range (0, 2);
+		//Rolls for culprit
+		crewCulprit = Random.Range (0, 2);
 
-		if (roll <= 6) {
-			rend.material.color = Color.green;
+		//Sets who dies at the start
+		if (crewAlive == 1) {
+			_Cook.alive = false;
+			Debug.Log ("Cook is dead");
 		} else {
-			rend.material.color = Color.red;
+			_Engineer.alive = false;
+			Debug.Log ("Engineer is dead");
+		}
+
+		//Sets who is the culprit
+		if (crewCulprit == 1) {
+			_FirstMate.culprit = true;
+			Debug.Log ("The culprit is the FirstMate");
+		} else {
+			_Pilot.culprit = true;
+			Debug.Log ("The culprit is the Pilot");
 		}
 	}
 
-	void OnMouseDown() {
-		Judgement ();
+	void Start() {
+
+	}
+
+	void Update() {
+
 	}
 }

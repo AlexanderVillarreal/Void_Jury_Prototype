@@ -50,6 +50,11 @@
      <Compile Include="Assets\Scripts\ChangeScene.cs" />
      <Compile Include="Assets\Scripts\Collect.cs" />
      <Compile Include="Assets\Scripts\Crew.cs" />
+     <Compile Include="Assets\Scripts\Crew_Cook.cs" />
+     <Compile Include="Assets\Scripts\Crew_Doctor.cs" />
+     <Compile Include="Assets\Scripts\Crew_Engineer.cs" />
+     <Compile Include="Assets\Scripts\Crew_FirstMate.cs" />
+     <Compile Include="Assets\Scripts\Crew_Pilot.cs" />
      <Compile Include="Assets\Scripts\JuryTest.cs" />
      <Compile Include="Assets\Scripts\Raycast.cs" />
  <Reference Include="UnityEngine.UI">
