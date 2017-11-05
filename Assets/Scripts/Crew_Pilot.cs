@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Crew_Pilot : Crew {
 
+	//Canvas GameObjects for chatbox
+	public GameObject TextBox;
+	public GameObject Sprite;
 	// Use this for initialization
 	void Start () {
 		
@@ -14,7 +17,13 @@ public class Crew_Pilot : Crew {
 		DeadCheck ();
 	}
 
-	void OnMouseDown() {
+	/*void OnMouseDown() {
 		Judgement ();
+	}*/
+
+	void OnMouseDown()
+	{
+		Sprite.SetActive (true);
+		TextBox.SetActive (true);
 	}
 }
