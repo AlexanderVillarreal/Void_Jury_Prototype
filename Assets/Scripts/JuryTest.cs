@@ -4,46 +4,39 @@ using UnityEngine;
 
 public class JuryTest : MonoBehaviour {
 
-	//All of this is attached to Camera
-	public Crew_FirstMate _FirstMate;
-	public Crew_Pilot _Pilot;
-	public Crew_Cook _Cook;
-	public Crew_Doctor _Doctor;
-	public Crew_Engineer _Engineer;
+	private Light spotLight;
+	private Vector3 startingPos;
 
-	public int crewCulprit;
-	public int crewAlive;
-
-	void Awake() {
-		//Rolls for starting victim
-		crewAlive = Random.Range (0, 2);
-		//Rolls for culprit
-		crewCulprit = Random.Range (0, 2);
-
-		//Sets who dies at the start
-		if (crewAlive == 1) {
-			_Cook.alive = false;
-			Debug.Log ("Cook is dead");
-		} else {
-			_Engineer.alive = false;
-			Debug.Log ("Engineer is dead");
-		}
-
-		//Sets who is the culprit
-		if (crewCulprit == 1) {
-			_FirstMate.culprit = true;
-			Debug.Log ("The culprit is the FirstMate");
-		} else {
-			_Pilot.culprit = true;
-			Debug.Log ("The culprit is the Pilot");
-		}
+	void Start ()
+	{
+		// SpotLight settings for "Interrogation"
+		spotLight = GameObject.Find ("JuryLight").GetComponent<Light> ();
+		startingPos = new Vector3 (-6f, 3.45f, -12f);
 	}
 
-	void Start() {
+	/*public void Judgement() {
+		Renderer rend = GetComponent<Renderer> ();
 
-	}
+		float roll = Random.Range (0.0f, 10.0f);
 
-	void Update() {
+		print ("They rolled a " + roll);
 
+		if (roll <= 6) {
+			rend.material.color = Color.green;
+		} else {
+			rend.material.color = Color.red;
+		}
+	}*/
+
+	/*void OnMouseDown() {
+		Judgement ();
+	}*/
+
+	void OnMouseOver ()
+	{
+		print ("Over " + this.gameObject.name);
+		Vector3 targetLightPosition = startingPos;
+		targetLightPosition.x = this.transform.position.x;
+		spotLight.transform.position = targetLightPosition;
 	}
 }
