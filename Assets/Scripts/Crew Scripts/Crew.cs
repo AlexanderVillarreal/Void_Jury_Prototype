@@ -10,7 +10,6 @@ public class Crew : MonoBehaviour {
 	public int loyalty = 0;
 	public bool alive = true;
 	public bool culprit = false;
-	public string selectedCrew;
 
 	public void Judgement() {
 		//For the sake of testing this will be used to change color
@@ -41,6 +40,5 @@ public class Crew : MonoBehaviour {
 
 	public void HideText() {
 		DialogueText.SetActive (false);
-		selectedCrew = "";
 	}
 }

@@ -16,16 +16,18 @@ public class Crew_FirstMate : Crew {
 
 	void OnMouseDown()
 	{
-		// Activate the sprite and corresponding TextBox to be visible when the crew member is clicked on.
-		print ("First Mate Selected");
-		Sprite.SetActive (true);
-		TextBox.SetActive (true);
-		//Saves selected crew for dialogue purposes
-		selectedCrew = this.name;
+		if (JuryManager.jurySingleton.selectedCrew == "") {
+			// Activate the sprite and corresponding TextBox to be visible when the crew member is clicked on.
+			print ("First Mate Selected");
+			Sprite.SetActive (true);
+			TextBox.SetActive (true);
+			//Saves selected crew for dialogue purposes
+			JuryManager.jurySingleton.selectedCrew = this.name;
+		}
 	}
 
 	public void DisplayText() {
-		if (selectedCrew == "FirstMate") {
+		if (JuryManager.jurySingleton.selectedCrew == "FirstMate") {
 			DialogueText.SetActive (true);
 		}
 	}
