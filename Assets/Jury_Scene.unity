@@ -153,6 +153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 23600686}
   - component: {fileID: 23600685}
+  - component: {fileID: 23600687}
   m_Layer: 0
   m_Name: AccusationManager
   m_TagString: Untagged
@@ -175,6 +176,12 @@ MonoBehaviour:
   cluesLeftText: {fileID: 1667418984}
   finalizeAccusationButton: {fileID: 961151063}
   cluesLeftToChoose: 3
+  selectedCrew: 
+  endText: {fileID: 238442658}
+  replay: {fileID: 493101253}
+  ____________________: 0
+  crew: []
+  juryVote: 0
 --- !u!4 &23600686
 Transform:
   m_ObjectHideFlags: 0
@@ -188,6 +195,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &23600687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 23600684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760898159d89c9f4ea655aaaca266ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &82206632
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,7 +776,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 566101865}
+      - m_Target: {fileID: 23600685}
         m_MethodName: resetSelected
         m_Mode: 1
         m_Arguments:
@@ -925,6 +943,80 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 954039831}
   m_Script: {fileID: 11500000, guid: 27feb32b190fac743bd284189f37860f, type: 3}
+--- !u!1 &238442656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 238442657}
+  - component: {fileID: 238442659}
+  - component: {fileID: 238442658}
+  m_Layer: 5
+  m_Name: End_Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &238442657
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 238442656}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 715940398}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -15}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &238442658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 238442656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: YOU WIN!
+--- !u!222 &238442659
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 238442656}
 --- !u!1001 &258943894
 Prefab:
   m_ObjectHideFlags: 0
@@ -1163,6 +1255,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114607860510505978, guid: c09b194cc165c8a4cb8e07ef7248926d,
         type: 2}
+      propertyPath: DialogueText
+      value: 
+      objectReference: {fileID: 1801712888}
+    - target: {fileID: 114607860510505978, guid: c09b194cc165c8a4cb8e07ef7248926d,
+        type: 2}
       propertyPath: TextBox
       value: 
       objectReference: {fileID: 816466788}
@@ -1171,11 +1268,6 @@ Prefab:
       propertyPath: Sprite
       value: 
       objectReference: {fileID: 1363653476}
-    - target: {fileID: 114607860510505978, guid: c09b194cc165c8a4cb8e07ef7248926d,
-        type: 2}
-      propertyPath: DialogueText
-      value: 
-      objectReference: {fileID: 1801712888}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c09b194cc165c8a4cb8e07ef7248926d, type: 2}
   m_IsPrefabParent: 0
@@ -1468,6 +1560,128 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 492650280}
+--- !u!1 &493101251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 493101252}
+  - component: {fileID: 493101255}
+  - component: {fileID: 493101254}
+  - component: {fileID: 493101253}
+  m_Layer: 5
+  m_Name: Replay_Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &493101252
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 493101251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1702380634}
+  m_Father: {fileID: 715940398}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -80, y: 20}
+  m_SizeDelta: {x: 160, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &493101253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 493101251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.43382353, b: 0.43382353, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 493101254}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 23600687}
+        m_MethodName: ChangeToScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &493101254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 493101251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &493101255
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 493101251}
 --- !u!114 &536428467 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114723990637405472, guid: 528e7db317dd0c049a0609a3e03ff7bb,
@@ -1691,9 +1905,8 @@ GameObject:
   m_Component:
   - component: {fileID: 566101864}
   - component: {fileID: 566101863}
-  - component: {fileID: 566101865}
   m_Layer: 0
-  m_Name: _JuryManager
+  m_Name: OnAwake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1730,18 +1943,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &566101865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 566101862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 510a8ea6473dea746847015ed2d7dacf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedCrew: 
 --- !u!1 &568689181
 GameObject:
   m_ObjectHideFlags: 0
@@ -2049,6 +2250,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114794452531816688, guid: b544758365f15c543b8a7ac8cdfd9883,
         type: 2}
+      propertyPath: DialogueText
+      value: 
+      objectReference: {fileID: 975941999}
+    - target: {fileID: 114794452531816688, guid: b544758365f15c543b8a7ac8cdfd9883,
+        type: 2}
       propertyPath: TextBox
       value: 
       objectReference: {fileID: 816466788}
@@ -2057,11 +2263,6 @@ Prefab:
       propertyPath: Sprite
       value: 
       objectReference: {fileID: 1974068500}
-    - target: {fileID: 114794452531816688, guid: b544758365f15c543b8a7ac8cdfd9883,
-        type: 2}
-      propertyPath: DialogueText
-      value: 
-      objectReference: {fileID: 975941999}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b544758365f15c543b8a7ac8cdfd9883, type: 2}
   m_IsPrefabParent: 0
@@ -2354,6 +2555,8 @@ RectTransform:
   - {fileID: 990633274}
   - {fileID: 961151062}
   - {fileID: 757778161}
+  - {fileID: 238442657}
+  - {fileID: 493101252}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3249,6 +3452,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114403282687681886, guid: db8581b85a1a75c48b11c986a71ea3a3,
         type: 2}
+      propertyPath: DialogueText
+      value: 
+      objectReference: {fileID: 1104239917}
+    - target: {fileID: 114403282687681886, guid: db8581b85a1a75c48b11c986a71ea3a3,
+        type: 2}
       propertyPath: TextBox
       value: 
       objectReference: {fileID: 816466788}
@@ -3257,11 +3465,6 @@ Prefab:
       propertyPath: Sprite
       value: 
       objectReference: {fileID: 1289512989}
-    - target: {fileID: 114403282687681886, guid: db8581b85a1a75c48b11c986a71ea3a3,
-        type: 2}
-      propertyPath: DialogueText
-      value: 
-      objectReference: {fileID: 1104239917}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db8581b85a1a75c48b11c986a71ea3a3, type: 2}
   m_IsPrefabParent: 0
@@ -3366,63 +3569,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 730281073}
-        m_MethodName: Judgement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1789923715}
-        m_MethodName: Judgement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 220313187}
-        m_MethodName: Judgement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 536428467}
-        m_MethodName: Judgement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 220313187}
-        m_MethodName: Judgement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 586555891}
-        m_MethodName: Judgement
+      - m_Target: {fileID: 23600685}
+        m_MethodName: EndScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3769,6 +3917,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114320528211590382, guid: 8fcdb4c49a07d5546a1349c45eae079f,
         type: 2}
+      propertyPath: DialogueText
+      value: 
+      objectReference: {fileID: 2068568171}
+    - target: {fileID: 114320528211590382, guid: 8fcdb4c49a07d5546a1349c45eae079f,
+        type: 2}
       propertyPath: TextBox
       value: 
       objectReference: {fileID: 816466788}
@@ -3777,11 +3930,6 @@ Prefab:
       propertyPath: Sprite
       value: 
       objectReference: {fileID: 429500880}
-    - target: {fileID: 114320528211590382, guid: 8fcdb4c49a07d5546a1349c45eae079f,
-        type: 2}
-      propertyPath: DialogueText
-      value: 
-      objectReference: {fileID: 2068568171}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8fcdb4c49a07d5546a1349c45eae079f, type: 2}
   m_IsPrefabParent: 0
@@ -5994,6 +6142,82 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -54}
   m_SizeDelta: {x: 63, y: 53}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1702380633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1702380634}
+  - component: {fileID: 1702380636}
+  - component: {fileID: 1702380635}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1702380634
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1702380633}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 493101252}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1702380635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1702380633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Replay
+
+'
+--- !u!222 &1702380636
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1702380633}
 --- !u!1 &1733854070
 GameObject:
   m_ObjectHideFlags: 0
@@ -6253,6 +6477,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114723990637405472, guid: 528e7db317dd0c049a0609a3e03ff7bb,
         type: 2}
+      propertyPath: DialogueText
+      value: 
+      objectReference: {fileID: 1218494155}
+    - target: {fileID: 114723990637405472, guid: 528e7db317dd0c049a0609a3e03ff7bb,
+        type: 2}
       propertyPath: TextBox
       value: 
       objectReference: {fileID: 816466788}
@@ -6261,11 +6490,6 @@ Prefab:
       propertyPath: Sprite
       value: 
       objectReference: {fileID: 673847237}
-    - target: {fileID: 114723990637405472, guid: 528e7db317dd0c049a0609a3e03ff7bb,
-        type: 2}
-      propertyPath: DialogueText
-      value: 
-      objectReference: {fileID: 1218494155}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 528e7db317dd0c049a0609a3e03ff7bb, type: 2}
   m_IsPrefabParent: 0

@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114980825558449922}
   m_Layer: 0
   m_Name: Doctor
-  m_TagString: Untagged
+  m_TagString: Crew
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7855253cff08fcf4c8602c58f306fc4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueText: {fileID: 0}
   loyalty: 0
   alive: 1
   culprit: 0

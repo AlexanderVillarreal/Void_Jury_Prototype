@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114089561515443140}
   m_Layer: 0
   m_Name: Engineer
-  m_TagString: Untagged
+  m_TagString: Crew
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27feb32b190fac743bd284189f37860f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueText: {fileID: 0}
   loyalty: 0
   alive: 1
   culprit: 0

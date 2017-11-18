@@ -16,18 +16,18 @@ public class Crew_Doctor : Crew {
 
 	void OnMouseDown()
 	{
-		if (JuryManager.jurySingleton.selectedCrew == "") {
+		if (AccusationManager.S.selectedCrew == "") {
 			// Activate the sprite and corresponding TextBox to be visible when the crew member is clicked on.
 			print ("Doctor Selected");
 			Sprite.SetActive (true);
 			TextBox.SetActive (true);
 			//Saves selected crew for dialogue purposes
-			JuryManager.jurySingleton.selectedCrew = this.name;
+			AccusationManager.S.selectedCrew = this.name;
 		}
 	}
 
 	public void DisplayText() {
-		if (JuryManager.jurySingleton.selectedCrew == "Doctor") {
+		if (AccusationManager.S.selectedCrew == "Doctor") {
 			DialogueText.SetActive (true);
 		}
 	}
