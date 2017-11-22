@@ -39,8 +39,8 @@ GameObject:
   - component: {fileID: 33113051977335420}
   - component: {fileID: 65475448811672128}
   - component: {fileID: 23337789459235694}
-  - component: {fileID: 114794452531816688}
   - component: {fileID: 114155990639514890}
+  - component: {fileID: 114371555286720056}
   m_Layer: 0
   m_Name: Cook
   m_TagString: Crew
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19125ea0d3eaa304888b2433266099d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114794452531816688
+--- !u!114 &114371555286720056
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -198,12 +198,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1840815721476240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0770a3cabb70e3c478c073a1200ba51f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bf9647464de3db438280fceca78dc35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TextBox: {fileID: 0}
+  Sprite: {fileID: 0}
   DialogueText: {fileID: 0}
   loyalty: 0
   alive: 1
   culprit: 0
-  TextBox: {fileID: 0}
-  Sprite: {fileID: 0}

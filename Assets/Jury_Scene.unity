@@ -179,6 +179,7 @@ MonoBehaviour:
   selectedCrew: 
   endText: {fileID: 238442658}
   replay: {fileID: 493101253}
+  crewObject: {fileID: 0}
   ____________________: 0
   crew: []
   juryVote: 0
@@ -937,12 +938,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224888400579308100, guid: f9604c1dc5a055544947631427b4343c,
     type: 2}
   m_PrefabInternal: {fileID: 208368443}
---- !u!114 &220313187 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114403282687681886, guid: db8581b85a1a75c48b11c986a71ea3a3,
-    type: 2}
-  m_PrefabInternal: {fileID: 954039831}
-  m_Script: {fileID: 11500000, guid: 27feb32b190fac743bd284189f37860f, type: 3}
 --- !u!1 &238442656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,9 +1263,16 @@ Prefab:
       propertyPath: Sprite
       value: 
       objectReference: {fileID: 1257976698}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114607860510505978, guid: c09b194cc165c8a4cb8e07ef7248926d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c09b194cc165c8a4cb8e07ef7248926d, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &351961932 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114652646849118630, guid: db8581b85a1a75c48b11c986a71ea3a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 954039831}
+  m_Script: {fileID: 11500000, guid: 5bf9647464de3db438280fceca78dc35, type: 3}
 --- !u!1 &375793709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1687,12 +1689,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 493101251}
---- !u!114 &536428467 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114723990637405472, guid: 528e7db317dd0c049a0609a3e03ff7bb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1866133911}
-  m_Script: {fileID: 11500000, guid: b0fbcafda28b2ca48877214e2157f441, type: 3}
 --- !u!1 &542762659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1928,11 +1924,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db18390a502a50849b9245dee057027b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _FirstMate: {fileID: 536428467}
-  _Pilot: {fileID: 586555891}
-  _Cook: {fileID: 730281073}
-  _Doctor: {fileID: 1789923715}
-  _Engineer: {fileID: 220313187}
+  _FirstMate: {fileID: 1687077975}
+  _Pilot: {fileID: 592416186}
+  _Cook: {fileID: 1846816963}
+  _Doctor: {fileID: 1521039666}
+  _Engineer: {fileID: 351961932}
   crewCulprit: 0
   crewAlive: 0
 --- !u!4 &566101864
@@ -1991,12 +1987,28 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 568689181}
---- !u!114 &586555891 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114607860510505978, guid: c09b194cc165c8a4cb8e07ef7248926d,
+--- !u!1 &592416185 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1107976376291394, guid: c09b194cc165c8a4cb8e07ef7248926d,
     type: 2}
   m_PrefabInternal: {fileID: 341839379}
-  m_Script: {fileID: 11500000, guid: 4df9676d05f9cb14a9dad88e36ae7032, type: 3}
+--- !u!114 &592416186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 592416185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf9647464de3db438280fceca78dc35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextBox: {fileID: 816466788}
+  Sprite: {fileID: 1257976698}
+  DialogueText: {fileID: 1801712888}
+  loyalty: 0
+  alive: 1
+  culprit: 0
 --- !u!1 &601989259
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,21 +2191,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114794452531816688, guid: b544758365f15c543b8a7ac8cdfd9883,
-        type: 2}
-      propertyPath: DialogueText
-      value: 
-      objectReference: {fileID: 975941999}
-    - target: {fileID: 114794452531816688, guid: b544758365f15c543b8a7ac8cdfd9883,
+    - target: {fileID: 114371555286720056, guid: b544758365f15c543b8a7ac8cdfd9883,
         type: 2}
       propertyPath: TextBox
       value: 
       objectReference: {fileID: 816466788}
-    - target: {fileID: 114794452531816688, guid: b544758365f15c543b8a7ac8cdfd9883,
+    - target: {fileID: 114371555286720056, guid: b544758365f15c543b8a7ac8cdfd9883,
         type: 2}
       propertyPath: Sprite
       value: 
       objectReference: {fileID: 1974068500}
+    - target: {fileID: 114371555286720056, guid: b544758365f15c543b8a7ac8cdfd9883,
+        type: 2}
+      propertyPath: DialogueText
+      value: 
+      objectReference: {fileID: 975941999}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b544758365f15c543b8a7ac8cdfd9883, type: 2}
   m_IsPrefabParent: 0
@@ -2295,7 +2307,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 536428467}
+      - m_Target: {fileID: 1687077975}
         m_MethodName: DisplayText
         m_Mode: 1
         m_Arguments:
@@ -2306,7 +2318,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 586555891}
+      - m_Target: {fileID: 592416186}
         m_MethodName: DisplayText
         m_Mode: 1
         m_Arguments:
@@ -2317,7 +2329,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 730281073}
+      - m_Target: {fileID: 1846816963}
         m_MethodName: DisplayText
         m_Mode: 1
         m_Arguments:
@@ -2328,7 +2340,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1789923715}
+      - m_Target: {fileID: 1521039666}
         m_MethodName: DisplayText
         m_Mode: 1
         m_Arguments:
@@ -2339,7 +2351,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 220313187}
+      - m_Target: {fileID: 351961932}
         m_MethodName: DisplayText
         m_Mode: 1
         m_Arguments:
@@ -2496,12 +2508,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &730281073 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114794452531816688, guid: b544758365f15c543b8a7ac8cdfd9883,
-    type: 2}
-  m_PrefabInternal: {fileID: 699614438}
-  m_Script: {fileID: 11500000, guid: 0770a3cabb70e3c478c073a1200ba51f, type: 3}
 --- !u!1 &742287832
 GameObject:
   m_ObjectHideFlags: 0
@@ -3416,7 +3422,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114403282687681886, guid: db8581b85a1a75c48b11c986a71ea3a3,
+    - target: {fileID: 114652646849118630, guid: db8581b85a1a75c48b11c986a71ea3a3,
+        type: 2}
+      propertyPath: TextBox
+      value: 
+      objectReference: {fileID: 816466788}
+    - target: {fileID: 114652646849118630, guid: db8581b85a1a75c48b11c986a71ea3a3,
+        type: 2}
+      propertyPath: Sprite
+      value: 
+      objectReference: {fileID: 777710712}
+    - target: {fileID: 114652646849118630, guid: db8581b85a1a75c48b11c986a71ea3a3,
         type: 2}
       propertyPath: DialogueText
       value: 
@@ -3431,7 +3447,18 @@ Prefab:
       propertyPath: Sprite
       value: 
       objectReference: {fileID: 777710712}
-    m_RemovedComponents: []
+    - target: {fileID: 114403282687681886, guid: db8581b85a1a75c48b11c986a71ea3a3,
+        type: 2}
+      propertyPath: DialogueText
+      value: 
+      objectReference: {fileID: 1104239917}
+    - target: {fileID: 65429688179614420, guid: db8581b85a1a75c48b11c986a71ea3a3,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114403282687681886, guid: db8581b85a1a75c48b11c986a71ea3a3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: db8581b85a1a75c48b11c986a71ea3a3, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &961151061
@@ -3681,9 +3708,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 730281073}
-        m_MethodName: HideText
-        m_Mode: 1
+      - m_Target: {fileID: 975941999}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3875,21 +3902,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114320528211590382, guid: 8fcdb4c49a07d5546a1349c45eae079f,
-        type: 2}
-      propertyPath: DialogueText
-      value: 
-      objectReference: {fileID: 2068568171}
-    - target: {fileID: 114320528211590382, guid: 8fcdb4c49a07d5546a1349c45eae079f,
+    - target: {fileID: 114774493582489230, guid: 8fcdb4c49a07d5546a1349c45eae079f,
         type: 2}
       propertyPath: TextBox
       value: 
       objectReference: {fileID: 816466788}
-    - target: {fileID: 114320528211590382, guid: 8fcdb4c49a07d5546a1349c45eae079f,
+    - target: {fileID: 114774493582489230, guid: 8fcdb4c49a07d5546a1349c45eae079f,
         type: 2}
       propertyPath: Sprite
       value: 
       objectReference: {fileID: 429500880}
+    - target: {fileID: 114774493582489230, guid: 8fcdb4c49a07d5546a1349c45eae079f,
+        type: 2}
+      propertyPath: DialogueText
+      value: 
+      objectReference: {fileID: 2068568171}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8fcdb4c49a07d5546a1349c45eae079f, type: 2}
   m_IsPrefabParent: 0
@@ -4204,9 +4231,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 220313187}
-        m_MethodName: HideText
-        m_Mode: 1
+      - m_Target: {fileID: 1104239917}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4672,9 +4699,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 536428467}
-        m_MethodName: HideText
-        m_Mode: 1
+      - m_Target: {fileID: 1218494155}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5647,6 +5674,12 @@ RectTransform:
   m_AnchoredPosition: {x: -417, y: -6}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1521039666 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114774493582489230, guid: 8fcdb4c49a07d5546a1349c45eae079f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1027065285}
+  m_Script: {fileID: 11500000, guid: 5bf9647464de3db438280fceca78dc35, type: 3}
 --- !u!1 &1578129548
 GameObject:
   m_ObjectHideFlags: 0
@@ -5988,6 +6021,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -54}
   m_SizeDelta: {x: 63, y: 53}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1687077974 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1230944799076454, guid: 528e7db317dd0c049a0609a3e03ff7bb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1866133911}
+--- !u!114 &1687077975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1687077974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf9647464de3db438280fceca78dc35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextBox: {fileID: 816466788}
+  Sprite: {fileID: 673847237}
+  DialogueText: {fileID: 1218494155}
+  loyalty: 0
+  alive: 1
+  culprit: 0
 --- !u!1 &1702380633
 GameObject:
   m_ObjectHideFlags: 0
@@ -6132,12 +6187,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1733854070}
---- !u!114 &1789923715 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114320528211590382, guid: 8fcdb4c49a07d5546a1349c45eae079f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1027065285}
-  m_Script: {fileID: 11500000, guid: 7855253cff08fcf4c8602c58f306fc4a, type: 3}
 --- !u!1 &1801712888
 GameObject:
   m_ObjectHideFlags: 0
@@ -6236,9 +6285,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 586555891}
-        m_MethodName: HideText
-        m_Mode: 1
+      - m_Target: {fileID: 1801712888}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6282,6 +6331,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1801712888}
+--- !u!114 &1846816963 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114371555286720056, guid: b544758365f15c543b8a7ac8cdfd9883,
+    type: 2}
+  m_PrefabInternal: {fileID: 699614438}
+  m_Script: {fileID: 11500000, guid: 5bf9647464de3db438280fceca78dc35, type: 3}
 --- !u!1001 &1866133911
 Prefab:
   m_ObjectHideFlags: 0
@@ -6323,11 +6378,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114723990637405472, guid: 528e7db317dd0c049a0609a3e03ff7bb,
         type: 2}
-      propertyPath: DialogueText
-      value: 
-      objectReference: {fileID: 1218494155}
-    - target: {fileID: 114723990637405472, guid: 528e7db317dd0c049a0609a3e03ff7bb,
-        type: 2}
       propertyPath: TextBox
       value: 
       objectReference: {fileID: 816466788}
@@ -6336,6 +6386,11 @@ Prefab:
       propertyPath: Sprite
       value: 
       objectReference: {fileID: 673847237}
+    - target: {fileID: 114723990637405472, guid: 528e7db317dd0c049a0609a3e03ff7bb,
+        type: 2}
+      propertyPath: DialogueText
+      value: 
+      objectReference: {fileID: 1218494155}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 528e7db317dd0c049a0609a3e03ff7bb, type: 2}
   m_IsPrefabParent: 0
@@ -6516,9 +6571,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1789923715}
-        m_MethodName: HideText
-        m_Mode: 1
+      - m_Target: {fileID: 2068568171}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 33797193062186032}
   - component: {fileID: 65145201289061860}
   - component: {fileID: 23625611592541494}
-  - component: {fileID: 114320528211590382}
   - component: {fileID: 114980825558449922}
+  - component: {fileID: 114774493582489230}
   m_Layer: 0
   m_Name: Doctor
   m_TagString: Crew
@@ -179,7 +179,7 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4279703319
---- !u!114 &114320528211590382
+--- !u!114 &114774493582489230
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -187,15 +187,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1744389618324756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7855253cff08fcf4c8602c58f306fc4a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bf9647464de3db438280fceca78dc35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TextBox: {fileID: 0}
+  Sprite: {fileID: 0}
   DialogueText: {fileID: 0}
   loyalty: 0
   alive: 1
   culprit: 0
-  TextBox: {fileID: 0}
-  Sprite: {fileID: 0}
 --- !u!114 &114980825558449922
 MonoBehaviour:
   m_ObjectHideFlags: 1

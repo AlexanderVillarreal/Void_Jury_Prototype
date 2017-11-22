@@ -5,11 +5,11 @@ using UnityEngine;
 public class OnAwake : MonoBehaviour {
 
 	//All of this is attached to Camera
-	public Crew_FirstMate _FirstMate;
-	public Crew_Pilot _Pilot;
-	public Crew_Cook _Cook;
-	public Crew_Doctor _Doctor;
-	public Crew_Engineer _Engineer;
+	public Crew _FirstMate;
+	public Crew _Pilot;
+	public Crew _Cook;
+	public Crew _Doctor;
+	public Crew _Engineer;
 
 	public int crewCulprit;
 	public int crewAlive;

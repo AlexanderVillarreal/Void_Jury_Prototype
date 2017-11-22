@@ -14,6 +14,7 @@ public class AccusationManager : MonoBehaviour {
 	public string 							selectedCrew;
 	public Text 							endText;
 	public Button							replay;
+	public GameObject 						crewObject; //Testing
 
 	public bool ____________________;
 
@@ -51,6 +52,8 @@ public class AccusationManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		RaycastForCrew ();
 
 		cluesLeftText.text = cluesLeftToChoose.ToString ();
 	}
@@ -134,5 +137,36 @@ public class AccusationManager : MonoBehaviour {
 		}
 		//Replay button still in progress
 		//replay.gameObject.SetActive (true);
+	}
+
+	void RaycastForCrew() {
+		if (Input.GetMouseButtonDown (0)) {
+			Debug.Log ("Selecting crew");
+
+			Vector3 mousePosition;
+			RaycastHit hit;
+			Ray ray;
+
+			//Update ray
+			ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+			mousePosition = Input.mousePosition;
+
+			//The raycast works but in scene view it points towards canvas
+			Debug.DrawRay (transform.position, mousePosition, Color.green);
+
+			if (Physics.Raycast (ray, out hit, 100.0f)) {
+				if (hit.collider.tag == "Crew" && selectedCrew == "") {
+					// Activate the sprite and corresponding TextBox to be visible when the crew member is clicked on.
+					Debug.Log (hit.collider.gameObject.name + " was selected by Raycast");
+					crewObject = hit.collider.gameObject;
+					//Activate Sprites
+					crewObject.GetComponent<Crew>().Sprite.SetActive (true);
+					//Activate TextBox
+					crewObject.GetComponent<Crew> ().TextBox.SetActive (true);
+					//Saves selected crew for dialogue purposes
+					selectedCrew = crewObject.name;
+				}
+			}
+		}
 	}
 }

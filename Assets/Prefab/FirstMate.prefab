@@ -201,9 +201,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0fbcafda28b2ca48877214e2157f441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TextBox: {fileID: 0}
+  Sprite: {fileID: 0}
   DialogueText: {fileID: 0}
   loyalty: 0
   alive: 1
   culprit: 0
-  TextBox: {fileID: 0}
-  Sprite: {fileID: 0}

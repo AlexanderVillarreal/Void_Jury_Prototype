@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Crew : MonoBehaviour {
 
+	//Canvas GameObjects for chatbox
+	public GameObject TextBox;
+	public GameObject Sprite;
 	public GameObject DialogueText;
 
 	//public string name;
@@ -24,5 +27,11 @@ public class Crew : MonoBehaviour {
 
 	public void HideText() {
 		DialogueText.SetActive (false);
+	}
+
+	public void DisplayText() {
+		if (AccusationManager.S.selectedCrew == this.gameObject.name) {
+			DialogueText.SetActive (true);
+		}
 	}
 }
